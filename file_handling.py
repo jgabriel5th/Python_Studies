@@ -60,3 +60,22 @@ archive5.write("Python has been helping me a lot in college.")
 # Testing Append Mode and its method:
 archive6 = open('python2.txt', 'a')
 archive6.write('\nBesides, this knowledge will help me to understand JavaScript, PHP, Dart.')
+
+'''
+Closing a file
+- It is important to close the file when the file handling is finished to free up resources.
+- Python automatically closes a file when the object of a file is reassigned to another file or not in use.
+- However, it is a good practice to manually close a file.
+
+The close() method:
+- A built-in method provided by Python that closes the file object.
+- Syntax: file_object.close()
+'''
+
+# Closing all the files I opened:
+archive.close()
+archive2.close()
+archive3.close()
+archive4.close()
+archive5.close()
+archive6.close()
