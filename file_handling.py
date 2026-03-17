@@ -29,11 +29,18 @@ wb - The same as "w" but binary.
 w+ - Quite similar to "w", however it serves for writing and reading. if the file doesn't exist, it creates a new one for reading and writing.
 wb+ - Also as w+, but binary.
 
+Built-in method to write a file:
+write() - It writes any string to an open file. Python string can have binary data and not just text.
+file_object.write(data) - Syntax used to write the contents to a file.
+
 Append Mode: differently from write mode that overwrite the existing file, the append mode will continue writing the data.
 a - Opens a file for appending. The file pointer is at the end of the file if the file exists, if not it creates a new one for writing.
 ab - The same as "a" but binary.
 a+ - Similar  to "a", but for both appending and reading. If the file doesn't exist, it creates a new one for reading and writing.
 ab+ - Basically a+ but binary.
+
+Built-in method to append:
+write() - just like Write Mode.
 '''
 
 # Testing Read Mode and its methods:
@@ -45,3 +52,11 @@ print(archive.read())
 print(archive2.read(6))
 print(archive3.readline())
 print(archive4.readlines())
+
+# Testing Write Mode and its method:
+archive5 = open("python2.txt", "w")
+archive5.write("Python has been helping me a lot in college.")
+
+# Testing Append Mode and its method:
+archive6 = open('python2.txt', 'a')
+archive6.write('\nBesides, this knowledge will help me to understand JavaScript, PHP, Dart.')
