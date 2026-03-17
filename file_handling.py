@@ -79,3 +79,22 @@ archive3.close()
 archive4.close()
 archive5.close()
 archive6.close()
+
+'''
+Manipulating Pointer: methods to change and check the pointer's position.
+tell() - It tells the current pointer's position within the file.
+seek(position, from) - seek() method changes the current file position. The "position" argument indicates the number of bytes to be moved.
+The "from" argument that is not mandatory, specifies the reference position from where the bytes are going to be moved.
+'''
+
+# Testing tell():
+archive = open('python.txt', 'r')
+print(f'Pointer position before reading is: {archive.tell()}')
+print(archive.read())
+print(f'Pointer position after reading is: {archive.tell()}')
+
+# Testing seek():
+archive2 = open('python2.txt', 'r')
+print(f'Pointer position is: {archive2.tell()}')
+archive2.seek(5)
+print(f'Pointer position after manipulating is: {archive2.tell()}')
