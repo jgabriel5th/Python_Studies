@@ -2,6 +2,7 @@
 Learning file handling in Python.
 
 Opening a file in Python:
+- The file must be in the same folder.
 - Python provides a built-in function named open() to open a file. It returns the file object that can be used to do several file operations later.
 - Syntax to open the file: file_object = open(file_name, access_mode)
 
@@ -16,6 +17,12 @@ rb - Reading only in binary format, file pointer at the beginning of the file as
 r+ - Opens a file for reading and writing. File pointer at the beginning.
 rb+ - Opens a file for reading and writing in binary format. File pointer at the beginning.
 
+Built-in methods to read a file:
+read() - Reads the content until it reaches the end of the file.
+read(size) - The "size" is a passed parameter in number of bytes to be read.
+readline() - Reads one single line of the file at a time.
+readlines() - Reads all the lines till it reaches the end of the file.
+
 Write Mode:
 w - Write-only mode. It will overwrite the file if the file exists, if not it will create a new one for writing.
 wb - The same as "w" but binary.
@@ -28,3 +35,13 @@ ab - The same as "a" but binary.
 a+ - Similar  to "a", but for both appending and reading. If the file doesn't exist, it creates a new one for reading and writing.
 ab+ - Basically a+ but binary.
 '''
+
+# Testing Read Mode and its methods:
+archive = open("python.txt", 'r')
+archive2 = open("python.txt", 'r')
+archive3 = open("python.txt", 'r')
+archive4 = open("python.txt", 'r')
+print(archive.read())
+print(archive2.read(6))
+print(archive3.readline())
+print(archive4.readlines())
