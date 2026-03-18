@@ -45,9 +45,10 @@ IndentationError - Error when indentation is not specified properly.
 TypeError - When an operation or function is used with an invalid data type, a data that was not specified.
 ValueError - When the built-in function's arguments have invalid values specified.
 
-Try-Except: statements used to handle Exceptions in Python.
+Try-Except and Finally: statements used to handle Exceptions in Python.
 Try - If a particular operation can raise an exception, it must be put inside the try clause.
 Except - If the exception is raised, it'll be passed to the except statement, the developer will put a code to inside it to handle the exception.
+Finally(optional) - In some cases, a code must be executed rather the Exception was raised or not, then there is finally statement.
 
 Observations:
 - If, nothing happens inside the try statement, the code will be executed normally.
@@ -87,8 +88,10 @@ except NameError as e:
 try:
     num1 = int(input('Enter first number: '))
     num2 = int(input('Enter second number: '))
-    print(f'Division is: {num1 / num2}')
+    print(f'Division is: {num1 / num2}') # Whenever an exception is raised, the statements after it are skipped.
 except ZeroDivisionError:
     print('Sorry, but you cannot divide a number by zero')
 except KeyboardInterrupt:
     print('That was a keyboard error, probably you pressed ctrl+c')
+finally:
+    print('Thank you for seeing this repository!')
