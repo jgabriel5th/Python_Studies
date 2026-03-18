@@ -56,13 +56,15 @@ Observations:
 - A generic expect clause can be used to handle any exception. It is used the Exception class.
 - After the except clause, it is possible to include an else-clause, it'll be executed if try doesn't raise any exception.
 
-Try-Except Syntax
+Try-Except(finally) Syntax
 try:
     # Code that can raise the error
 except Exception1:
     # If Exception1 happens, execute this block of code
 except Exception2:
     # If Exception2 happens, execute this other block of code
+finally:
+    # A block of code that'll be executed even if an Exception raise or not.
 '''
 
 # Testing Try-Except:
@@ -95,3 +97,21 @@ except KeyboardInterrupt:
     print('That was a keyboard error, probably you pressed ctrl+c')
 finally:
     print('Thank you for seeing this repository!')
+
+'''
+Raise Statement:
+- It's possible to manually raise an exception in Python
+
+Syntax:
+raise Exception('Message')
+- Exception is the type of exception(ex: ZeroDivisionError, KeyboardInterrupt)
+- The argument 'Message' is a value for the exception which is optional.
+'''
+
+# Testing Raise Statement:
+try:
+    x = int(input('Enter a positive integer: '))
+    if x <= 0:
+        raise ValueError("Not a positive number")
+except ValueError as e:
+    print("Please type only numbers")
