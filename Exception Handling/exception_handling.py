@@ -44,4 +44,51 @@ SyntaxError - Error in Python syntax.
 IndentationError - Error when indentation is not specified properly.
 TypeError - When an operation or function is used with an invalid data type, a data that was not specified.
 ValueError - When the built-in function's arguments have invalid values specified.
+
+Try-Except: statements used to handle Exceptions in Python.
+Try - If a particular operation can raise an exception, it must be put inside the try clause.
+Except - If the exception is raised, it'll be passed to the except statement, the developer will put a code to inside it to handle the exception.
+
+Observations:
+- If, nothing happens inside the try statement, the code will be executed normally.
+- A single try can have multiple except blocks.
+- A generic expect clause can be used to handle any exception. It is used the Exception class.
+- After the except clause, it is possible to include an else-clause, it'll be executed if try doesn't raise any exception.
+
+Try-Except Syntax
+try:
+    # Code that can raise the error
+except Exception1:
+    # If Exception1 happens, execute this block of code
+except Exception2:
+    # If Exception2 happens, execute this other block of code
 '''
+
+# Testing Try-Except:
+try:
+    print(name) # NameError
+except Exception: # Using generic Exception class(pretending that I don't know what error will be raised)
+    print("An error has occurred. Please contact the developer.")
+
+# Putting more details
+try:
+    print(name)
+except NameError as e:
+    print(f"An error has occurred, please contact the developer. Error: {e}")
+
+# Now trying a clean code
+name2 = "Botafogo"
+try:
+    print(name2)
+except NameError as e:
+    print(f'Some error occurred. Please contact the developer: {e}') 
+
+# Testing with Division:
+try:
+    num1 = int(input('Enter first number: '))
+    num2 = int(input('Enter second number: '))
+    print(f'Division is: {num1 / num2}')
+except ZeroDivisionError:
+    print('Sorry, but you cannot divide a number by zero')
+except KeyboardInterrupt:
+    print('That was a keyboard error, probably you pressed ctrl+c')
