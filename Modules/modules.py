@@ -20,4 +20,32 @@ Windows: pip install module_name
 
 Custom modules - They're the packages created by the developer, basically they are Python files which can be imported into another Python file/project.
 When imported, it's possible to access their attributes and methods. These files files are called Python custom modules.
+
+
+The three ways of using a Python module:
+
+The import statement - To use a module, the first thing to do is import it using the import keyword, doing it will import the whole module into the Python project.
+To use the function provided by the imported module it'll be necessary to use the dot(.) operator. 
+Example: module_name.functionName() <- That's how an imported function will work.
+Syntax to import: import module_name
+
+Import statement and renaming - There are situations when the module's name is big, in order to solver this issue it's possible to rename a module while importing it.
+The way to do it is using the import...as
+Syntax: import module_name as a
+- "a" is a new name given to this module, it could have been anything else. Therefore, instead of using module_name.functionName(), it would be a.functionName().
+
+The from...import statement - It serves to import a particular attribute/function/class from a module, instead of the whole module.
+Syntax: from module_name import functionName
+Since it was imported only a particular attribute/function it isn't necessary to use the dort operator(.), the function can simply be called as shown below:
+functionName()
 '''
+
+# Testing the three ways
+import math 
+print(math.factorial(4))
+
+import math as m
+print(m.sqrt(4))
+
+from math import floor
+print(floor(3.2))
