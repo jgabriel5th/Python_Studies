@@ -1,9 +1,6 @@
 '''
 Reusability: reuse a particular code than developing a new one.
 Python modules are used to do that.
-<<<<<<< HEAD
-'''
-=======
 
 Modules refer to a file containing Python statements and definitions.
 Modules are also used to break down large programs into small manageable and organized files.
@@ -76,4 +73,3 @@ print(f'''Addition is {calculator.add(a, b)}
 Subtraction is {calculator.sub(a, b)}
 Multiplication is {calculator.multiply(a, b)}
 Division is {calculator.divide(a, b)}''')
->>>>>>> modules
