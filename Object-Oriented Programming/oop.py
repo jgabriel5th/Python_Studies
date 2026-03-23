@@ -30,4 +30,29 @@ Inheritance - A class can inherit various characteristics and capabilities from 
 existing code, it can be derived from the existing one instead of developing from scratch.
 Polymorphism - This word means "having many forms", so polymorphism is the ability of something to have more than one form. In programming, an operation may exhibit different behaviors
 in different instances, these behaviors will depend upon the types of data used in the operation.
+
+Building Blocks of OOP:
+- Classes and Objects are the building blocks of the object-oriented system.
+- Abstraction, Encapsulation, Inheritance, Polymorphism combined with Classes and Objects make an object-oriented program.
+
+Classes:
+- Like lists, tuples, dictionaries... Classes are advanced data structures to store, manipulate, and structure the data.
+- Differently from lists, tuples, dictionaries and others data structures that can store only a few attributes, Classes is a type of user-defined structure that can store various attributes,
+(Data - both primitive and user-defined) along with their functionalities, all together as a single unit.
+- These attributes and their functionalities(behaviors) can be accessed via Objects.
+
+Definition of a Class in OOP: "Blueprint to create objects."
+- It's a user-defined prototype for an object that defines the set of attributes that characterize any object of the class.
+- It's just like a prototype depending on which the real-world objects are created.
+- An analogy: when a building is being planned to be created, the first to do is to create a blueprint of how the building would be. Depending upon that blueprint, real-world building structures
+would be created that would be that same but with different attributes and functionalites such as colors, windows, interior, etc. At the most basic level, the base structure would be the same as
+defined in the blueprint.
+
+Objects:
+- They are called as an instance of the class.
+- An object contains two trings: Attributes(Data variables of the class) and Behaviors(Functions defined in the class).
+
+Example:
+- If the building is a class, therefore color, floors, flats, entrance, etc, would be the attributes, and isFinished(), isBusy(), flatAvailable(), etc would be its be behaviors that are the methods.
+Each building would have all these data and behaviors and unique to themselves.
 '''
