@@ -172,15 +172,15 @@ will help the class to undersand which current object is accessing the attribute
 class Developer:
     totalDevelopers = 0
 
-    def __init__(self, devName, age, designation, salary):
+    def __init__(self, devName, age, level, salary):
         self.devName = devName
         self.age = age
-        self.designation = designation
+        self.level = level
         self.salary = salary
         Developer.totalDevelopers = Developer.totalDevelopers + 1
     
     def getDevDetails(self): # returns all the details about the developers
-        return self.devName, self.age, self.designation, self.salary
+        return self.devName, self.age, self.level, self.salary
     
     def updateSalary(self, newSalary): # accepts a parameter as newSalary and updates the self.salary to the passed value.
         self.salary = newSalary
@@ -198,12 +198,89 @@ Class variables and Instance variables:
 '''
 
 # Creating objects and seeing how these methods work
-devOne = Developer('João Gabriel', 21, 'Python Developer', 3000)
+devOne = Developer('João Gabriel', 21, 'Junior', 3000)
 print(devOne.getDevDetails())
 
-devTwo = Developer('Guilherme', 20, 'JavaScript Developer', 3000)
+devTwo = Developer('Guilherme', 20, 'Junior', 3000)
 print(devTwo.getDevDetails())
 
 devOne.updateSalary(3500)
 print(devOne.getDevDetails())
 print(Developer.totalDevelopers)
+
+'''
+More about Inheritance
+- One class can inherit various characteristics(attributes) and capabilities(behavior/methods of a class) from another class.
+- Reason: since there's a class Developer, if a creation of a class FrontEndDeveloper is considered it could just inherit all those data from the Developer class rather than creating again in the FrontEndDeveloper class.
+Therefore, reusability.
+
+Inheritance: Terminologies
+Parent Class - It's the class the being inherited from the other classed. Also called the Base class.
+Child Class - The class that inherits from another class. Also called a Derived class.
+
+Inherintance: Syntax
+class BaseClass:
+   #body of the base class
+class DerivedClass(BaseClass):
+   #body of the derived class
+
+- The name of the Parent Class is passed in the parenthesis while defining the Child Class.
+'''
+
+# Creating a Child Class: FrontEndDeveloper
+class FrontEndDeveloper(Developer):
+    pass
+
+# Since the Child Class is empty an interesting thing will happen, it has only the access to the attributes and methods from the Parent Class even empty.
+# If it had something in it, it would first create an object from it, but it doesn't so it will create an object using only the attributes and methods from the Parent Class.
+# Trying it:
+frntEnd1 = FrontEndDeveloper('Willian', 21, 'Junior', 3000)
+print(frntEnd1.getDevDetails())
+
+# Adding attributes and methods to the Child Class
+class FrontEndDeveloper(Developer):
+
+    def __init__(self, devName, age, level, salary, progLanguage):
+        self.progLanguage = progLanguage # Creating a new one
+        Developer.__init__(self, devName, age, level, salary) # Making a call to the constructor of the Parent Class within the constructor of the Child Class.
+# Syntax: ParentClass.__init__(self, paremeter1, parameter2,...parameterN)
+    def getLanguage(self):
+        return f'The used programming language by the developer is {self.progLanguage}'
+
+frntEndOne = FrontEndDeveloper('Filipe', 21, 'Junior', 3000, 'JavaScript')
+print(frntEndOne.getDevDetails())
+print(frntEndOne.getLanguage())
+
+'''
+Inheritance Types:
+Single Inheritance - It's the inheritance done above. The derived class inherits from a single parent class.
+
+Multilevel Inheritance - It's like a relationship representing a child and grandfather. 
+Syntax:
+class Employee:
+    pass
+class Intern(Employee)
+    pass
+class Bonus(Intern)
+    pass
+- The Bonus class cannot directly access the Employee class, however since it's inheriting the Intern class it can access the attributes and behaviors of both Employee
+and the Intern class.
+
+Multiple Inheritance - It's when a class can be derived from more than one base class. All the features of the base classes are inherited into the the derived class.
+Syntax:
+class Company:
+    pass
+class Employee:
+    pass
+class Intern(Company, Employee):
+    pass
+
+Hierarchical Inheritance - When more than one derived class is created from a single base class.
+Syntax:
+class Company
+    pass
+class Employee(Company)
+    pass
+class Intern(Company)
+    pass
+'''
