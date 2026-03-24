@@ -98,4 +98,70 @@ print(empTwo.empName, empTwo.age, empTwo.designation)
 '''
 Each object is a unique instance of the class and has its own attributes and behaviors, however the example above doesn't confirm it, because the attributes of the class Employee are quite rigid
 so they return the same attributes and data for all the objects.
+Thankfully, it's possible to solve this with the help of Constructors in Python.
+
+Constructor:
+- They're usually used for instantiating an object.
+- Their function is to initialize(assign values) the data members of the class when an object of the class is created.
+
+Syntax:
+def __init__(self):
+    # body of the constructor
+- The attributes that all objects must have are defined in a method called __init__().
+- Each time an object is created, __init__() sets the initial state of the object by assigning the values of the object's properties.
+- __init__() initializes each new instance of the class.
+
+Types of Python Constructors:
+Default Constructor - It doesn't accept any arguments but 'self' which is a reference to the instance being constructed.
+Syntax: objName = className()
+- If a constructor is not provided in the syntax above, Python automatically assigns the default constructor to the class.
+
+Parameterized Constructor - The first argument is 'self' and the rest of the arguments are provided which will be required attributes for the class.
+Syntax: objName = className(parameterOne, parameterTwo,...)
+- In this case, when an object is created with a parameterized constructor class, the arguments will need to be passed to the created object. 
+It's quite similar how it's done in a function that accepts a parameter.
 ''' 
+
+# Using __init__() <- Default Constructor:
+class Employee:
+    def __init__(self):
+        self.empName = 'John'
+        self.age = 30
+        self.designation = 'Manager'
+
+empOne = Employee()
+print(empOne.empName)
+
+# Just like the previous one, the attributes will be the same for all the objects.
+
+# Now, making a dynamic class with Parameterized Constructor:
+class Employee:
+    def __init__(self, empName, age, designation):
+        self.empName = empName
+        self.age = age
+        self.designation = designation
+
+empOne = Employee("João", 21, "Developer")
+empTwo = Employee("Raphael", 32, "Manager")
+print(empOne.empName)
+print(empTwo.empName)
+
+class Professor:
+    def __init__(self, proName, age, subject):
+        self.proName = proName
+        self.age = age
+        self.subject = subject
+
+prof1 = Professor("Francisco Coelho", 38, "Database")
+prof2 = Professor("Ricardo", 40, "Computer Architecture")
+prof3 = Professor("Luiz Lins", 40, "Back-End Framework")
+prof4 = Professor("José Everton", 32, "Mobile Development")
+print(prof1.proName, prof1.age, prof1.subject)
+
+# Now, each object will have its unique values since they are being passed in their creation, directly inside the __init__ method.
+
+'''
+Self: it helps the class to individually recognize the instance(object) and accordingly pass the data to the object. It helps the class to know which object is requesting to
+access the attributes and the methodss and depending upon the object parameters, the data is processed. In the previous example, it was written self.empName, self.age, self.designation which
+will help the class to undersand which current object is accessing the attributes and accordingly return the output.
+'''
