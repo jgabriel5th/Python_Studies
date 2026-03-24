@@ -165,3 +165,45 @@ Self: it helps the class to individually recognize the instance(object) and acco
 access the attributes and the methodss and depending upon the object parameters, the data is processed. In the previous example, it was written self.empName, self.age, self.designation which
 will help the class to undersand which current object is accessing the attributes and accordingly return the output.
 '''
+
+# Adding Methods(Functions)
+# It's nothing but simple Python function inside the class.
+
+class Developer:
+    totalDevelopers = 0
+
+    def __init__(self, devName, age, designation, salary):
+        self.devName = devName
+        self.age = age
+        self.designation = designation
+        self.salary = salary
+        Developer.totalDevelopers = Developer.totalDevelopers + 1
+    
+    def getDevDetails(self): # returns all the details about the developers
+        return self.devName, self.age, self.designation, self.salary
+    
+    def updateSalary(self, newSalary): # accepts a parameter as newSalary and updates the self.salary to the passed value.
+        self.salary = newSalary
+        print('Salary Updated')
+        return self.salary
+    # Every method in a class has a first default parameter as 'self'.
+
+
+'''
+Class variables and Instance variables:
+- totalDevelopers is not defined inside the __init__ and was not passed in the constructor because that value has to be calculated by the program and should not be passed at the time of object creation.
+- Whenever a new object is created, the __init__ method is called, updating the value(totalDevelopers) by 1.
+- It isn't possible to use 'self' in totalDevelopers, since this attribute doesn't depend on the object. It's possible to access it directly - Developer.totalDevelopers.
+- Variables that are shared by all the objects are called Class variables and variable defined inside __init__ are called Instance variables.
+'''
+
+# Creating objects and seeing how these methods work
+devOne = Developer('João Gabriel', 21, 'Python Developer', 3000)
+print(devOne.getDevDetails())
+
+devTwo = Developer('Guilherme', 20, 'JavaScript Developer', 3000)
+print(devTwo.getDevDetails())
+
+devOne.updateSalary(3500)
+print(devOne.getDevDetails())
+print(Developer.totalDevelopers)
