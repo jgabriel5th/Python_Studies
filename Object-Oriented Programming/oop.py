@@ -55,4 +55,47 @@ Objects:
 Example:
 - If the building is a class, therefore color, floors, flats, entrance, etc, would be the attributes, and isFinished(), isBusy(), flatAvailable(), etc would be its be behaviors that are the methods.
 Each building would have all these data and behaviors and unique to themselves.
+
+Defining a Class: Syntax
+class className:
+    #body of the class
+- 'class' is the keyword used to define a class in Python.
+- className is the name given to the class. It's similar to giving a name to a variable or a function, so it's important to choose a meaningful name.
+- It's terminated with a semicolon.
+- Inside the class, the attributes, the functions and the body of the class must be defined and indented.
 '''
+
+# Creating an Employee Class
+class Employee:
+    pass
+ 
+ # The "pass" is just like a temporary placeholder until we add the required functionalities. The pass statement will be ignored by the Python interpreter and can be seen as a null statement.
+ # Nothing will be returned in the output since at the moment the class is empty.
+
+class Employee:
+    empName = 'John'
+    age = 30
+    designation = 'Manager'
+
+# It won't return any output considering that a class is just the description.
+# It's necessary to create an object to access the attributes
+
+'''
+Declaring an Object: Syntax
+objName = className()
+- After it, it's possible to access the attributes and methods using the following syntax:
+objName.attributeName
+objName.methodName()
+'''
+
+# Creating an object of Employee Class
+empOne = Employee()
+print(empOne.empName, empOne.age, empOne.designation)
+
+empTwo = Employee()
+print(empTwo.empName, empTwo.age, empTwo.designation)
+
+'''
+Each object is a unique instance of the class and has its own attributes and behaviors, however the example above doesn't confirm it, because the attributes of the class Employee are quite rigid
+so they return the same attributes and data for all the objects.
+''' 
