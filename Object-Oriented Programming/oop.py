@@ -284,3 +284,55 @@ class Employee(Company)
 class Intern(Company)
     pass
 '''
+
+'''
+More about Polymorphism: someething can have many forms
+- In OOP an object can have various forms in different situations depending upon the attributes and methods.
+- A real-life example: Soccerplayer, in general the players of the team can have different forms such as forward player, midfield, goalkeeper(can use hands), defense and reserve(not playing).
+- Just like the example above an object can have different forms and behave differently according to the situation.
+
+The two types of Polymorphism in OOP: at the most basic level
+Method Overloading - It's the situation where there are two methods of the same name but with different parameters in the same class.
+Unfortunately, this method which is one of the most important forms of Polymorphism in OOP is NOT SUPPORTED in Python. Though it exists in other OOP programming languages like Java, C++, C#, etc, Python
+doesn't support it.
+Example: a method named area(), if the goal is to find the area of a retangle the parameters would be length and breath, now if the goal is to find the square the parameter would be just the side of the
+square.
+Method Overriding - It's when there are two methods with the same and the same parameters but in two different classes, it'll only come into the picture if the inheritance is involved, because the derived class
+can override the methods from the parent class.
+'''
+# Trying to do an example of Method Overloading:
+class Geometry:
+    def __init__(self):
+        self.name = "Name"
+    
+    def area(self, length, breadth):
+        return f"The area of the retangle is: {(length * breadth)}" 
+    
+    def area(self, side):
+        return f"The area of the square is: {(side * side)}" # This one overwrite the other, that's why it doesn't work. It's something of the programming language.
+    
+calc1 = Geometry()
+print(calc1.area(8))
+
+# Doing an example of Method Overriding:
+class Phone:
+    def __init__(self, number, color, brand):
+        self.number = number
+        self.color = color
+        self.brand = brand
+    
+    def makingCall(self):
+        return "Ring ring ring"
+    
+class Smartphone(Phone):
+    def __init__(self, number, color, brand, processor):
+        self.processor = processor
+        Phone.__init__(self, number, color, brand)
+    
+    def makingCall(self):
+        return "No ring ring anymore"
+
+brick = Phone(41, "brown", "nokia")
+redmi = Smartphone(82, "red", "Xiaomi", "Snapdragon")
+print(brick.makingCall())
+print(redmi.makingCall()) # <- Both methods have the same names and parameters but they do different things, cause' one is from the Base Class and the other is from the Child Class.
