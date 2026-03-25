@@ -336,3 +336,5 @@ brick = Phone(41, "brown", "nokia")
 redmi = Smartphone(82, "red", "Xiaomi", "Snapdragon")
 print(brick.makingCall())
 print(redmi.makingCall()) # <- Both methods have the same names and parameters but they do different things, cause' one is from the Base Class and the other is from the Child Class.
+
+# OOP Branch
