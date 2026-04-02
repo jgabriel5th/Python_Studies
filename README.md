@@ -1,4 +1,6 @@
 ![Logo do Python](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/120px-Python-logo-notext.svg.png?_=20250701090410)
+
+[Python Studies](#python-studies) | [Description](#description) | [Goals](#goals)
 # Python Studies
 Welcome to Python Studies, a repository created to store my progress in Python language.
 
