@@ -1,10 +1,13 @@
+![Logo do Python](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/120px-Python-logo-notext.svg.png?_=20250701090410)
 # Python Studies
+Welcome to Python Studies, a repository created to store my progress in Python language.
 
-**Description**
-- A repository created to store my development in Python language.
-- It is not from the beginning, I am almost reaching OOP, so I know how to create a variable, data types, lists, tuples, sets, dictionaries, functions.
-- Update: I've reached OOP and learned a lot of it :D
+## Description
+* Python 3.13.7
+* Just for studies
+* Django(soon)
 
-**Goals**
-- Starting from here, I want to learn OOP and other things from a Python course that I'm doing called PythonX. I've already done 18/26 topics.
-- After mastering Python, I will practice Django.
+## Goals
+- [x] Basic Python
+- [ ] OOP <- I studied the basic, but need to study further.
+- [ ] Django
