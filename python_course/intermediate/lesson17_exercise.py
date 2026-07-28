@@ -27,11 +27,11 @@ for option in range(3):
 
     for index, name in enumerate(options):
         print(f'{index}) {name}')
+
     answer = input('Type the right answer: ')
     got_it = False
     answer_int = None
     qtd_options = len(options)
-
     if answer.isdigit():
         answer_int = int(answer)
 
