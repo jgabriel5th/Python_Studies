@@ -8,7 +8,7 @@ for number in range(10):
 # print(list1)
 
 list1 = [number * 2 for number in range(10)]
-print(list1)
+# print(list1)
 
 # # Mapping the data in list comprehension
 products = [
@@ -20,7 +20,7 @@ products = [
 new_products = [{**product, 'price': product['price'] * 1.05} if product['price'] > 20 else {**product} for product in products]
 
 # print(new_products)
-print(*new_products, sep='\n')
+# print(*new_products, sep='\n')
 
 # Practing
 tasks = [
@@ -29,4 +29,13 @@ tasks = [
     {'task': 'study', 'how long': 3, },
 ]
 new_tasks = [{**task, 'how long': task['how long'] * 1.50} if task['how long'] < 2 else {**task} for task in tasks]
-print(*new_tasks, sep='\n')
+# print(*new_tasks, sep='\n')
+
+# Practing more - To fix the content
+names = [
+    {'name': 'Elicia', 'age': 20, },
+    {'name': 'Louise', 'age': 30, },
+    {'name': 'Abraham', 'age': 40, },
+]
+updated_names = [{'name': data['name'], 'age': data['age'] + 1 if data['name'] == 'Elicia' else data['age']} for data in names] 
+print(*updated_names, sep='\n') # It worked :D
