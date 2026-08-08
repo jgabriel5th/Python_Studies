@@ -53,3 +53,25 @@ print(another_if)
 
 rows_columns = [(x, y) if y != 2 else (x, y * 1000) for x in range(1, 11) for y in range(1, 6) if x != 2]
 print(rows_columns)
+
+##############################
+# STRING:
+string = 'João Gabriel'
+new_string = ''.join([letter for letter in string]) # Using ''.join() will avoid the separated letters.
+number_letters = 2
+new_string2 = '.'.join([string[index:index + number_letters] for index in range(0, len(string), number_letters)])
+print(new_string)
+print(new_string2)
+
+##############################
+# NEW NAMES:
+names = ['abraham', 'elícia', 'louise', 'john', 'mary']
+new_names = [f'{name[:-1].lower()}{name[-1].upper()}' for name in names]
+print(new_names)
+
+##############################
+# NUMBERS:
+numbers = [[number, number ** 2] for number in range(10)]
+flat = [y for x in numbers for y in x]
+print(numbers)
+print(flat)
