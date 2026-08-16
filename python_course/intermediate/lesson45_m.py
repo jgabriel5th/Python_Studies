@@ -1,1 +1,4 @@
-print('This module is called', __name__)
+module_variable = __name__
+
+def soma(x, y):
+    return x + y
