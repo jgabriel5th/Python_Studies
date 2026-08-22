@@ -1,3 +1,4 @@
+from lesson48_package.modules_b import hi # Put package_name.module is crucial before import to __main__
 __all__ = [ # Used to limit imported things by from package.modules_name import *
     'modules_divi',
 ]
