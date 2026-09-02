@@ -1,0 +1,30 @@
+[
+  {
+    "name": "mary",
+    "lastname": "jackson",
+    "age": 32,
+    "status": false,
+    "grades": [
+      "A",
+      "A+"
+    ],
+    "phones": {
+      "residential": "00 0000-0000",
+      "cellphone": "00 0000-0000"
+    }
+  },
+  {
+    "name": "tom",
+    "lastname": "riddle",
+    "age": 48,
+    "status": true,
+    "grades": [
+      "B",
+      "A"
+    ],
+    "phones": {
+      "residential": "00 0000-0000",
+      "cellphone": "00 0000-0000"
+    }
+  }
+]

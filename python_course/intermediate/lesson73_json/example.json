@@ -1,0 +1,6 @@
+{
+    "name": "John",
+    "lastName": "Watson",
+    "age": 44,
+    "addresses": [{ "line1": "boulevard. broken dreams"}, { "line1": "green day"}]
+}
