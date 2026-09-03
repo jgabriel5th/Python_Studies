@@ -1,0 +1,24 @@
+{
+  "name": "John",
+  "lastname": "Watson",
+  "Addresses": [
+    {
+      "street": "R1",
+      "number": 33
+    },
+    {
+      "street": "R2",
+      "number": 56
+    }
+  ],
+  "height": 1.9,
+  "favorite_numbers": [
+    2,
+    4,
+    6,
+    8,
+    10
+  ],
+  "dev": true,
+  "none": null
+}
