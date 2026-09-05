@@ -1,4 +1,5 @@
 import sys
+import json
 def toDo(tasklist):
     task = input('Insert a task: ').strip()
     if not task:
@@ -36,8 +37,23 @@ def exitProgram():
     'Finishing the program...')
     sys.exit()
 
+def read(tasklist, filePath):
+    data = []
+    try:
+        with open(filePath, 'r') as file:
+            data = json.load(file)
+    except FileNotFoundError:
+        print('File does not exist')
+        write(tasklist, filePath)
+    return data
+
+def write(tasklist, filePath):
+    with open(filePath, 'w') as file:
+        data = json.dump(tasklist, file, indent=2, ensure_ascii=False)
+
 def main():
-    tasklist = []
+    FILE_PATH = 'lesson_78.json'
+    tasklist = read([], FILE_PATH)
     task_redo = []
     while True:
         print('---TASKLIST---')
@@ -59,5 +75,6 @@ def main():
             command()
         else:
             print('Invalid command')
-
+        write(tasklist, FILE_PATH)
+        
 main()
