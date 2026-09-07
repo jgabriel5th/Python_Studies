@@ -1,0 +1,13 @@
+Curiosities about name conversions
+- PascalCase: it means the words start with uppercase and nothing is
+used to separate them, like: MyClass, Class, MyObjet, MyCoolProgram.
+This conversion is used with classes in Python;
+- camelCase: the only difference between camelCase to PascalCase is the
+first letter. In camelCase the first letter always starts with lowercase
+and the rest must start with uppercase. Like in: myFunction, sumNumber, etc.
+That conversion is not used in Python.
+- snake_case: this is the standard in Python to define anything that is not
+a class. Every letter will be lowercase and separated by an underline, like in:
+my_variable, cool_function, sum.
+
+The conversions used in Python are: snake_case for anything and PascalCase for classes.
