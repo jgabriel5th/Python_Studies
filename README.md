@@ -7,7 +7,6 @@ Now that I'm on vacation, I'm focusing on a Python course from Luiz Otávio Mira
 ## Description
 * Python 3.14.6
 * Just for studies
-* Django(soon)
 
 ## Goals
 - [x] Procedural Paradigm
