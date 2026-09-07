@@ -10,6 +10,8 @@ Now that I'm on vacation, I'm focusing on a Python course from Luiz Otávio Mira
 * Django(soon)
 
 ## Goals
-- [x] Basic Python
-- [ ] OOP <- I studied the basic, but need to study further.
+- [x] Procedural Paradigm
+- [x] Functional Paradigm
+- [ ] OOP <- Studying now
+- [ ] FastAPI
 - [ ] Django
